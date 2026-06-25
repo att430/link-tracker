@@ -1,4 +1,5 @@
 import LinkForm from './components/LinkForm'
+import LinkList from './components/LinkList'
 import { links } from './store'
 
 export default function Home() {
@@ -21,34 +22,7 @@ export default function Home() {
         <h2 className="mb-4 text-sm font-semibold uppercase tracking-widest text-zinc-400">
           Saved links
         </h2>
-
-        {savedLinks.length === 0 ? (
-          <p className="text-sm text-zinc-400">No links saved yet.</p>
-        ) : (
-          <ul className="flex flex-col gap-3">
-            {savedLinks.map((link) => (
-              <li
-                key={link.id}
-                className="flex flex-col gap-1 rounded-lg border border-zinc-200 bg-white px-4 py-3 shadow-sm"
-              >
-                <span className="text-sm font-medium text-zinc-900">
-                  {link.label}
-                </span>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="truncate text-xs text-zinc-500 hover:text-zinc-800 hover:underline"
-                >
-                  {link.url}
-                </a>
-                <time className="text-xs text-zinc-400">
-                  {new Date(link.createdAt).toLocaleString()}
-                </time>
-              </li>
-            ))}
-          </ul>
-        )}
+        <LinkList links={savedLinks} />
       </section>
     </main>
   )

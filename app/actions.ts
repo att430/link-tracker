@@ -39,3 +39,9 @@ export async function addLink(
   revalidatePath('/')
   return { error: null }
 }
+
+export async function deleteLink(id: string): Promise<void> {
+  const idx = links.findIndex((l) => l.id === id)
+  if (idx !== -1) links.splice(idx, 1)
+  revalidatePath('/')
+}
