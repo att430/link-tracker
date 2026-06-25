@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Link Tracker",
+  title: "My Link Tracker",
   description: "Save and organise links with a label",
 };
 
