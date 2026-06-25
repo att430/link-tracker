@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="mx-auto w-full max-w-xl px-4 py-12">
       <h1 className="mb-8 text-2xl font-semibold tracking-tight text-zinc-900">
-        Link Tracker
+        My Link Tracker
       </h1>
 
       <section className="mb-10 rounded-xl border border-zinc-200 bg-white p-6 shadow-sm">
